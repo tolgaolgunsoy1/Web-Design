@@ -1,1 +1,46 @@
-sad
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Yan Yana 3 Resim Linkli</title>
+    <style>
+        /* Resimleri yan yana göstermek için basit stil */
+        .resim-container {
+            display: flex;
+            justify-content: center; /* Ortalar */
+            gap: 20px; /* Resimler arasında boşluk */
+            margin-top: 50px;
+        }
+
+        .resim-container img {
+            width: 200px;
+            border-radius: 10px; /* Köşeleri yuvarlatır (isteğe bağlı) */
+            transition: transform 0.3s;
+        }
+
+        /* Fareyle üzerine gelince biraz büyüsün */
+        .resim-container img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center;">Yan Yana 3 Resim - Tıklanabilir</h2>
+
+    <div class="resim-container">
+        <a href="https://www.google.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Example.jpg" alt="Resim 1">
+        </a>
+
+        <a href="https://www.wikipedia.org" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="Resim 2">
+        </a>
+
+        <a href="https://www.youtube.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/JPEG_example_flower.jpg" alt="Resim 3">
+        </a>
+    </div>
+
+</body>
+</html>
