@@ -1,1 +1,82 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayfa Tasarımı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 20px;
+        }
+        .box {
+            width: 800px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 10px 0;
+            position: relative; /* Logo pozisyonunu kontrol etmek için */
+            background-color: white; /* Arka plan beyaz oldu */
+        }
+        .box1 {
+            background-image: none; /* Arka plan resmi kaldırıldı */
+            background-color: white; /* Arka plan beyaz */
+        }
+        .logo {
+            position: absolute;
+            top: 10px;  /* Logo'nun üstten mesafesi */
+            left: 10px; /* Logo'nun soldan mesafesi */
+            width: 120px; /* Logo boyutu biraz daha büyük yapıldı */
+        }
+        .box2 {
+            background-color: pink;
+        }
+        table {
+            width: 100%;
+            background-color: yellow;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box box1">
+            <!-- Logo Resmi ve tıklanabilir bağlantı -->
+            <a href="https://www.example.com" target="_blank">
+                <img src="https://images.bjk.com.tr/images/intro/sanli-armamiz-yenilendi-mobil.jpg" alt="Logo" class="logo">
+            </a>
+        </div>
+        <div class="box box2">
+            <table>
+                <tr>
+                    <th>Başlık 1</th>
+                    <th>Başlık 2</th>
+                    <th>Başlık 3</th>
+                </tr>
+                <tr>
+                    <td>Veri 1</td>
+                    <td>Veri 2</td>
+                    <td>Veri 3</td>
+                </tr>
+                <tr>
+                    <td>Veri 4</td>
+                    <td>Veri 5</td>
+                    <td>Veri 6</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
