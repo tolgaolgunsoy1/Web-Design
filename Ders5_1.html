@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Örneği</title>
+</head>
+<body>
+    <h2>Kullanıcı Bilgileri Formu</h2>
+
+    <form action="#" method="post">
+        <label for="ad">Adınızı giriniz:</label><br>
+        <input type="text" id="ad" name="ad"><br><br>
+
+        <label for="sifre">Şifrenizi giriniz:</label><br>
+        <input type="password" id="sifre" name="sifre"><br><br>
+
+        <p>Cinsiyetinizi seçiniz:</p>
+        <input type="radio" id="erkek" name="cinsiyet" value="Erkek">
+        <label for="erkek">Erkek</label><br>
+        <input type="radio" id="kadin" name="cinsiyet" value="Kadın">
+        <label for="kadin">Kadın</label><br><br>
+
+        <label for="araba">Favori arabanızı seçiniz:</label><br>
+        <select id="araba" name="araba">
+            <option value="volvo">Volvo</option>
+            <option value="bmw">BMW</option>
+            <option value="audi">Audi</option>
+        </select><br><br>
+
+        <label for="dilek">Bu alana dileklerinizi yazınız:</label><br>
+        <textarea id="dilek" name="dilek" rows="4" cols="30"></textarea><br><br>
+
+        <label for="dosya">Dosya seçiniz:</label><br>
+        <input type="file" id="dosya" name="dosya"><br><br>
+
+        <p>Sevdiğiniz oyunları seçiniz:</p>
+        <input type="checkbox" id="valorant" name="oyunlar" value="Valorant">
+        <label for="valorant">Valorant</label><br>
+
+        <input type="checkbox" id="counter" name="oyunlar" value="Counter Strike">
+        <label for="counter">Counter Strike</label><br>
+
+        <input type="checkbox" id="minecraft" name="oyunlar" value="Minecraft">
+        <label for="minecraft">Minecraft</label><br><br>
+
+        <input type="submit" value="Gönder">
+    </form>
+</body>
+</html>
