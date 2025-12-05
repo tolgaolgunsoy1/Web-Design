@@ -3,76 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yan ve Alt Bölmeler</title>
+    <title>Dört Eşit Bölme (Grid/Flexbox Hibrit)</title>
     
     <style>
+        /* GENEL VE KAPSAYICI AYARLAR */
         body {
             margin: 0;
             padding: 0;
-            height: 100vh; 
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            font-size: 24px;
+            height: 100vh; /* Ekranın tüm yüksekliğini kapla */
+            width: 100vw;  /* Ekranın tüm genişliğini kapla */
             
+            /* Ana Düzen (Body'de Grid ile yan yana 2 sütun oluşturulur) */
             display: grid;
-            
             grid-template-columns: 1fr 1fr; /* 50% / 50% */
-            
             grid-template-rows: 100%;
         }
 
         .bolme {
-            display: flex;
+            /* Metinler kaldırıldığı için ortalama stilleri teorik olarak gerekmiyor,
+               ancak yer tutucu olarak bırakıldı. */
+            display: flex; 
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            color: white;
-            text-align: center;
             box-sizing: border-box;
         }
         
+        /* SOL YARIM KAPSAYICI (50% Genişlik) */
         .sol-yarim {
+            /* Alt düzen (dikeyde 2 eşit parça oluşturulur) */
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /* İçindeki öğeleri alt alta diz */
         }
 
         .sol-ust {
-            flex: 1;
+            flex: 1; /* Sol yarımın dikey alanını eşit paylaş */
             background-color: #007bff; /* Mavi */
         }
 
         .sol-alt {
-            flex: 1; 
+            flex: 1; /* Sol yarımın dikey alanını eşit paylaş */
             background-color: #ffc107; /* Sarı */
-            color: black;
         }
 
-
+        /* SAĞ YARIM KAPSAYICI (50% Genişlik) */
         .sag-yarim {
+            /* Alt düzen (dikeyde 2 eşit parça oluşturulur) */
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /* İçindeki öğeleri alt alta diz */
         }
 
+        /* Hata düzeltildi (eksik kapatma ayracı eklendi) */
         .sag-ust {
-            flex: 1;
-            background-color: #dc3545;
+            flex: 1; /* Sağ yarımın dikey alanını eşit paylaş */
+            background-color: #dc3545; /* Kırmızı */
+        }
 
         .sag-alt {
-            flex: 1;
-            background-color: #343a40;
+            flex: 1; /* Sağ yarımın dikey alanını eşit paylaş */
+            background-color: #343a40; /* Siyah */
         }
     </style>
 </head>
 <body>
     
     <div class="sol-yarim">
-        <div class="bolme sol-ust">SOL ÜST (MAVİ)</div>
-        <div class="bolme sol-alt">SOL ALT (SARI)</div>
+        <div class="bolme sol-ust"></div>
+        <div class="bolme sol-alt"></div>
     </div>
     
     <div class="sag-yarim">
-        <div class="bolme sag-ust">SAĞ ÜST (KIRMIZI)</div>
-        <div class="bolme sag-alt">SAĞ ALT (SİYAH)</div>
+        <div class="bolme sag-ust"></div>
+        <div class="bolme sag-alt"></div>
     </div>
     
 </body>
