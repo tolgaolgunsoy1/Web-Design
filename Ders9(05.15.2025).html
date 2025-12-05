@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yan ve Alt Bölmeler</title>
+    
+    <style>
+        /* Ana Kapsayıcı (Body) */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; 
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            
+            /* CSS Grid'i etkinleştir */
+            display: grid;
+            
+            /* İki eşit genişlikte sütun oluştur */
+            grid-template-columns: 1fr 1fr; /* 50% / 50% */
+            
+            /* Tek bir satır kullan, yüksekliği otomatik ayarlanacak */
+            grid-template-rows: 100%;
+        }
+
+        /* Tüm Bölmeler İçin Ortak Stil */
+        .bolme {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            box-sizing: border-box; /* Padding'in genişliğe dahil olmasını sağlar */
+        }
+        
+        /* --- Sol Taraf (Sütun) --- */
+        .sol-yarim {
+            /* Kendi içinde Flex Container olur */
+            display: flex;
+            /* Öğeleri dikey olarak düzenle */
+            flex-direction: column;
+        }
+
+        /* Sol Üst (Mavi olarak kalır) */
+        .sol-ust {
+            /* Sol tarafın üst kısmını kaplar */
+            flex: 1; /* Mevcut alanı kapla */
+            background-color: #007bff; /* Mavi */
+        }
+
+        /* Sol Alt (Sarı) */
+        .sol-alt {
+            /* Alt kısmı daha küçük bir oranda ayarlayabiliriz veya eşit bölebiliriz. 
+               Burada üst ve altı eşit bölüyoruz. */
+            flex: 1; /* Üst kısımla eşit yer kapla (örneğin %50) */
+            background-color: #ffc107; /* Sarı */
+            color: black;
+        }
+
+
+        /* --- Sağ Taraf (Sütun) --- */
+        .sag-yarim {
+            /* Kendi içinde Flex Container olur */
+            display: flex;
+            /* Öğeleri dikey olarak düzenle */
+            flex-direction: column;
+        }
+
+        /* Sağ Üst (Kırmızı olarak kalır) */
+        .sag-ust {
+            flex: 1; /* Mevcut alanı kapla */
+            background-color: #dc3545; /* Kırmızı */
+        }
+
+        /* Sağ Alt (Siyah) */
+        .sag-alt {
+            flex: 1; /* Üst kısımla eşit yer kapla (örneğin %50) */
+            background-color: #343a40; /* Siyah */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="sol-yarim">
+        <div class="bolme sol-ust">SOL ÜST (MAVİ)</div>
+        <div class="bolme sol-alt">SOL ALT (SARI)</div>
+    </div>
+    
+    <div class="sag-yarim">
+        <div class="bolme sag-ust">SAĞ ÜST (KIRMIZI)</div>
+        <div class="bolme sag-alt">SAĞ ALT (SİYAH)</div>
+    </div>
+    
+</body>
+</html>
